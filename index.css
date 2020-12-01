@@ -1,0 +1,105 @@
+*{
+    padding: 0;
+    margin:0;
+}
+html,body{
+    height: 100%;
+}
+.wrapper{
+    width: 600px;
+    height:100%;
+    background-color: aqua;
+    margin:0 auto;
+    position: relative;
+}
+
+.header{
+    background-color: gray;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    font-weight:700;
+}
+.content{
+    background-color: #eee;
+    overflow-y:scorll;
+    overflow-x:hidden;
+    height:calc(100% - 90px);
+}
+.input-box{
+    background-color: #ddd;
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 20px);
+    padding: 10px;
+}
+.wrapper .content .avator{
+    width: 30px;
+    height:30px;
+    vertical-align: top;
+}
+.mine{
+    float: right;
+    width: 100%;
+    margin:10px 0;
+}
+.robot{
+    float: left;
+    width: 100%;
+}
+.text{
+    display: inline-block;
+    max-width: 250px;
+    line-height: 30px;
+    border-radius: 5px;
+    padding: 0 10px;
+    position: relative;
+}
+.mine .avator{
+    float: right;
+}
+.mine .text{
+    float: right;
+    background-color: greenyellow;
+    margin: 0 5px;
+}
+.mine .text::after{
+    content: "";
+    width: 0;
+    height:0;
+    border:5px solid transparent;
+    border-left-color: greenyellow;
+    position: absolute;
+    right: -10px;
+    top:10px;
+}
+
+.robot .text{
+    background-color: #fff;
+}
+.robot .text::after{
+    content: "";
+    width: 0;
+    height:0;
+    border:5px solid transparent;
+    border-right-color: #fff;
+    position: absolute;
+    left: -10px;
+    top:10px;
+}
+.input-box #send-text{
+    width: calc(100% - 80px);
+    height: 30px;
+    background-color: #fff;
+    border:none;
+    outline: none;
+    float: left;
+}
+#send-btn{
+    width: 80px;
+    height: 30px;
+    background-color:#ddd;
+    float: right;
+    cursor:pointer;
+}
